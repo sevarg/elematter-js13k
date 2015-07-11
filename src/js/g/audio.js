@@ -23,12 +23,14 @@ g.audio.add = function( key, count, settings ) {
 };
 
 g.audio.play = function( key ) {
-	var sound = g.audio.sounds[ key ];
-	var soundData = sound.length > 1 ? sound[ Math.floor( Math.random() * sound.length ) ] : sound[ 0 ];
-	soundData.pool[ soundData.tick ].play();
-	if( soundData.tick < soundData.count - 1 ) {
-		soundData.tick++;
-	} else {
-		soundData.tick = 0;
+	if(typeof g.settings.mute === 'undefined' || g.settings.mute === false){
+		var sound = g.audio.sounds[ key ];
+		var soundData = sound.length > 1 ? sound[ Math.floor( Math.random() * sound.length ) ] : sound[ 0 ];
+		soundData.pool[ soundData.tick ].play();
+		if( soundData.tick < soundData.count - 1 ) {
+			soundData.tick++;
+		} else {
+			soundData.tick = 0;
+		}
 	}
 };
