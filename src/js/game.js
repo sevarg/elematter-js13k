@@ -9,9 +9,9 @@ g.init = function() {
 	g.guid = 0;
 
 	// game dimensions
-	g.size = 40;
-	g.width = 800;
-	g.height = 600;
+	g.size = 50;
+	g.width = 1000;
+	g.height = 750;
 	g.cols = g.width / g.size;
 	g.rows = g.height / g.size;
 

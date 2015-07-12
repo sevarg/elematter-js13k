@@ -11,12 +11,12 @@ g.E = function( opt ) {
 
 g.E.prototype.init = function() {
 	this.guid = g.guid++;
-	this.size = 14;
+	this.size = 17;
 	this.dom = {};
 	this.dom.enemy = g.cE( null, 'enemy type-' + this.type );
 	if( this.isBoss ) {
 		g.addClass( this.dom.enemy, 'boss' );
-		this.size = 20;
+		this.size = 25;
 	}
 	this.dom.hl = g.cE( this.dom.enemy, 'hl' );
 	this.dom.hp = g.cE( this.dom.enemy, 'hp' );

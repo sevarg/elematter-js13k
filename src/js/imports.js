@@ -4,6 +4,7 @@
 //import('g/group.js');
 //import('g/pool.js');
 //import('g/util.js');
+//import('g/settings.js');
 //import('data/audio.js');
 //import('data/map.js');
 //import('data/towers.js');
